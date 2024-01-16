@@ -382,7 +382,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1345283083065714294, guid: 69c8944e427030a48bfb5f207125f058, type: 3}
       propertyPath: rotateSpeed
-      value: 250
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1345283083065714294, guid: 69c8944e427030a48bfb5f207125f058, type: 3}
       propertyPath: thrust
@@ -395,6 +395,10 @@ PrefabInstance:
     - target: {fileID: 3435007250262963024, guid: 69c8944e427030a48bfb5f207125f058, type: 3}
       propertyPath: m_IsKinematic
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435007250262963024, guid: 69c8944e427030a48bfb5f207125f058, type: 3}
+      propertyPath: m_AngularDrag
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5994910146530510133, guid: 69c8944e427030a48bfb5f207125f058, type: 3}
       propertyPath: m_Name

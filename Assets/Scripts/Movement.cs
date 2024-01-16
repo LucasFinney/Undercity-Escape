@@ -40,16 +40,18 @@ Vector2 inVector;
         else if(inVector.x>0)
        {
         Debug.Log("pressed right");
-         ApplyRotation(inVector);       
+         ApplyRotation(inVector);
       }
     }
 
     public void ApplyRotation(Vector3 _inVector)
     {
-      rb.constraints=RigidbodyConstraints.FreezeRotationZ; //Freeze rotation to manually rotate
-      transform.Rotate(Vector3.forward * Time.deltaTime *_inVector.x*rotateSpeed*-1 );
-      rb.constraints = RigidbodyConstraints.None;
-      rb.constraints=RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY; //Unfreeze to let phys system take over
+      //rb.constraints=RigidbodyConstraints.FreezeRotationZ; //Freeze rotation to manually rotate
+      //transform.Rotate(Vector3.forward * Time.deltaTime *_inVector.x*rotateSpeed*-1 );
+      //rb.AddTorque();
+      rb.AddRelativeTorque(Vector3.forward * Time.deltaTime *_inVector.x*rotateSpeed*-1);
+      //rb.constraints = RigidbodyConstraints.None;
+      //rb.constraints=RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY; //Unfreeze to let phys system take over
 
     }
 }
